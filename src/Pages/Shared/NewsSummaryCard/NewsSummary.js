@@ -5,7 +5,6 @@ import { FaEye, FaRegBookmark, FaShareAlt, FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const NewsSummary = ({ news }) => {
-    console.log(news);
     const { _id, image_url, title, total_view, rating, details, author } = news;
     return (
         <div>
@@ -31,7 +30,6 @@ const NewsSummary = ({ news }) => {
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Img
-                        rounded
                         variant="top"
                         src={image_url} />
                     <Card.Text>

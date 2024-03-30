@@ -6,7 +6,7 @@ const Category = () => {
     const allNews = useLoaderData();
     return (
         <div>
-            <h2>Components: {allNews.length}</h2>
+            <h2>Total news in this category: {allNews.length}</h2>
             {
                 allNews.map(news => <NewsSummary
                     key={news._id}

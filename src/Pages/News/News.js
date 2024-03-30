@@ -25,7 +25,7 @@ const News = () => {
                             </p>
                         </div>
                         <div>
-                            {details}
+                            <p>{details}</p>
                         </div>
                     </Card.Text>
                     <Link to={`/category/${category_id}`}>
