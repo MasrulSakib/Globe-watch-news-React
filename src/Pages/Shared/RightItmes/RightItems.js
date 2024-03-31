@@ -7,18 +7,24 @@ import { ListGroup } from 'react-bootstrap';
 import RightCarousal from '../RightCarousal/RightCarousal';
 import { AuthInfo } from '../../../Context/AuthContext/Authcontext';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const RightItems = () => {
-    const { providerLogin } = useContext(AuthInfo)
+    const { providerLogin, setLoader } = useContext(AuthInfo)
     const googleProvider = new GoogleAuthProvider();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/';
 
     const handleLogin = () => {
         providerLogin(googleProvider)
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true });
             })
-            .catch(error => console.error(error));
+            .catch(error => console.error(error))
+            .finally(() => { setLoader(false) })
     }
 
     return (

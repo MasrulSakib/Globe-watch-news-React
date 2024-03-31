@@ -17,15 +17,15 @@ const News = () => {
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
                         <div className='d-flex align-items-center justify-content-between fw-bolder my-4'>
-                            <p>Author: {author.name}</p>
-                            <p>Published date: {author.published_date}</p>
-                            <p className='d-flex align-items-center'>
+                            <span>Author: {author.name}</span>
+                            <span>Published date: {author.published_date}</span>
+                            <span className='d-flex align-items-center'>
                                 <FaStar className='text-warning'></FaStar>
                                 <span className='mb-0 ms-2'>{rating.number}</span>
-                            </p>
+                            </span>
                         </div>
                         <div>
-                            <p>{details}</p>
+                            <span>{details}</span>
                         </div>
                     </Card.Text>
                     <Link to={`/category/${category_id}`}>

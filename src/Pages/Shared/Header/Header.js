@@ -24,12 +24,12 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav className='d-flex align-items-center'>
-                        <Nav.Link >
+                        < >
                             {
                                 user?.uid ?
                                     <>
                                         <Button className='mx-2' variant='light' onClick={handleLogOut}>Log out</Button>
-                                        <span>{user?.displayName}</span>
+                                        <span className='text-light'>{user?.displayName}</span>
                                     </>
                                     :
                                     <div className='d-flex  gap-2'>
@@ -38,7 +38,7 @@ const Header = () => {
                                     </div>
                             }
 
-                        </Nav.Link>
+                        </>
                         <Nav.Link href="#link">
                             {
                                 user?.photoURL ?

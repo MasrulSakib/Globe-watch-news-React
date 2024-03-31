@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCzBUi8XUtj8qoNRa4qp5k-aOKwyT7C1F8",
-    authDomain: "globe-watch-news.firebaseapp.com",
-    projectId: "globe-watch-news",
-    storageBucket: "globe-watch-news.appspot.com",
-    messagingSenderId: "700777802771",
-    appId: "1:700777802771:web:ce75e4e625d95858bde3e6"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase
