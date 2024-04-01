@@ -5,7 +5,7 @@ const LeftItems = () => {
     const [categories, getCategories] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/news-categories')
+        fetch('https://globe-watch-news-server.vercel.app/news-categories')
             .then(res => res.json())
             .then(data => getCategories(data));
     }, [])
